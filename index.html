@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية - مدرسة الرافدين الأهلية </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* تنسيقات إضافية خاصة بالميزات والأقسام في الصفحة الرئيسية */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--primary);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .feature-card p {
+            color: #555;
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .quick-banner {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2.5rem 1.5rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .quick-banner h2 {
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+
+      <!-- الهيدر (العنوان والشعار) -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">مدرسة الرافدين الأهلية </a>
+            <a href="admission.html" class="btn" style="margin:0; padding: 0.4rem 1rem;">التسجيل السريع</a>
+        </div>
+    </header>
+
+    <!-- شريط التنقل المنفصل مع التمرير الأفقي -->
+    <nav class="main-nav">
+        <div class="nav-scroll-container">
+            <ul>
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="student-portal.html">بوابة الطالب</a></li>
+                <li><a href="activities.html">الأنشطة المدرسية</a></li>
+                <li><a href="gallery.html">معرض الصور</a></li>
+                <li><a href="admission.html">القبول والتسجيل</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- قسم الواجهة الرئيسية Hero Section -->
+        <section class="hero">
+            <h1>مرحباً بكم في مدرسة الرافدين </h1>
+            <p>نعمل على بناء مستقبل واعد لأبنائكم عبر التعليم المبتكر، الأنشطة المتنوعة، والبيئة التربوية المتكاملة.</p>
+            <a href="admission.html" class="btn">قدّم طلب الالتحاق الآن</a>
+            <a href="student-portal.html" class="btn" style="background: transparent; border: 2px solid var(--secondary); color: var(--secondary);">دخول بوابة الطالب</a>
+        </section>
+
+        <!-- قسم استعراض أركان الموقع والخدمات الرئيسية -->
+        <h2 style="text-align: center; color: var(--primary); margin-top: 2rem;">اكتشف خدماتنا ومرافقنا</h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>👨‍🎓 بوابة الطالب الرقمية</h3>
+                <p>منصة تفاعلية تمكّن الطلاب من متابعة الواجبات اليومية، الجدول الدراسي، وتحميل الكتب من المكتبة الرقمية.</p>
+                <a href="student-portal.html" class="btn">الانتقال للبوابة</a>
+            </div>
+
+            <div class="feature-card">
+                <h3>🤖 الأنشطة والأندية M</h3>
+                <p>نُنمّي مهارات الطلاب عبر أندية البرمجة، STEM، الأكاديمية الرياضية، والفنون والمسرح.</p>
+                <a href="activities.html" class="btn">استكشف الأنشطة</a>
+            </div>
+
+            <div class="feature-card">
+                <h3>🖼️ معرض الصور والمرافق</h3>
+                <p>جولة مصورة نأخذكم فيها عبر مختبراتنا المجهزة، القاعات الرياضية، والفعاليات المدرسية.</p>
+                <a href="gallery.html" class="btn">مشاهدة المعرض</a>
+            </div>
+
+            <div class="feature-card">
+                <h3>📝 القبول والتسجيل</h3>
+                <p>خطوات ميسرة لتسجيل أطفالكم للموسم الدراسي الجديد عبر استمارة التقديم المباشرة.</p>
+                <a href="admission.html" class="btn">سجل الآن</a>
+            </div>
+        </div>
+
+        <!-- بنر تواصل سريع -->
+        <div class="quick-banner">
+            <div>
+                <h2>هل لديك أي استفسار؟</h2>
+                <p>فريق قسم القبول والإرشاد جاهز للإجابة على كافة أسئلتكم.</p>
+            </div>
+            <a href="contact.html" class="btn" style="background-color: var(--white); color: var(--primary);">تواصل معنا الآن</a>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 مدرسة التميز الخاصة</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

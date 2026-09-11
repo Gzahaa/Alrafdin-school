@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القبول والتسجيل - مدرسة التميز الخاصة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <!-- الهيدر (العنوان والشعار) -->
+    <header>
+        <div class="header-container">
+      <a href="index.html" class="logo">مدرسة الرافدين الأهلية </a>
+            <a href="admission.html" class="btn" style="margin:0; padding: 0.4rem 1rem;">التسجيل السريع</a>
+        </div>
+    </header>
+
+    <!-- شريط التنقل المنفصل مع التمرير الأفقي -->
+    <nav class="main-nav">
+        <div class="nav-scroll-container">
+            <ul>
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="student-portal.html">بوابة الطالب</a></li>
+                <li><a href="activities.html">الأنشطة المدرسية</a></li>
+                <li><a href="gallery.html">معرض الصور</a></li>
+                <li><a href="admission.html">القبول والتسجيل</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h1>طلب التسجيل المبدئي</h1>
+        <p>يرجى تعبئة النموذج التالي لتسجيل الطالب للموسم الدراسي القادم:</p>
+        <br>
+        <form onsubmit="alert('تم إرسال الطلب بنجاح!'); return false;">
+            <div class="form-group">
+                <label>اسم الطالب الثلاثي:</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label>المرحلة الدراسية:</label>
+                <select required>
+                    <option value="">اختر المرحلة</option>
+                    <option>الابتدائية</option>
+                    <option>المتوسطة</option>
+                    <option>الثانوية</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>رقم هاتف ولي الأمر:</label>
+                <input type="tel" required>
+            </div>
+            <button type="submit" class="btn">إرسال الطلب</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 مدرسة التميز الخاصة</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

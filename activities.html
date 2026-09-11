@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنشطة المدرسة - مدرسة التميز الخاصة</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .activity-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .activity-img {
+            flex: 1 1 300px;
+            background: #e0e0e0;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+        }
+        .activity-content {
+            flex: 2 1 400px;
+            padding: 1.5rem;
+        }
+        .activity-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر (العنوان والشعار) -->
+    <header>
+        <div class="header-container">
+     <a href="index.html" class="logo">مدرسة الرافدين الأهلية </a>
+            <a href="admission.html" class="btn" style="margin:0; padding: 0.4rem 1rem;">التسجيل السريع</a>
+        </div>
+    </header>
+
+    <!-- شريط التنقل المنفصل مع التمرير الأفقي -->
+    <nav class="main-nav">
+        <div class="nav-scroll-container">
+            <ul>
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="student-portal.html">بوابة الطالب</a></li>
+                <li><a href="activities.html">الأنشطة المدرسية</a></li>
+                <li><a href="gallery.html">معرض الصور</a></li>
+                <li><a href="admission.html">القبول والتسجيل</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h1>الأنشطة المدرسية والأندية الطلابية</h1>
+        <p>نؤمن بتمكين مهارات الطلاب وتنمية مواهبهم من خلال مجموعة متنوعة من الأنشطة اللاصفية:</p>
+        <br>
+
+        <div class="activity-card">
+            <div class="activity-img">صورة نادي الروبوت والذكاء الاصطناعي</div>
+            <div class="activity-content">
+                <h3>نادي الروبوت والبرمجة (STEM)</h3>
+                <p>يتعلم الطلاب في هذا النادي أساسيات منطق البرمجة وتجميع الروبوتات وتصميم المشاريع التفاعلية للمشاركة في المسابقات المحلية والدولية.</p>
+                <button class="btn" onclick="alert('تم تسجيل اهتمامك بنادي الروبوت!')">الانضمام للنادي</button>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="activity-img">صورة النشاط الرياضي والبطولات</div>
+            <div class="activity-content">
+                <h3>الأكاديمية الرياضية والبطولات</h3>
+                <p>تشمل تدريبات كرة القدم، السباحة، والشطرنج تحت إشراف مدربين محترفين لتطوير اللياقة البدنية والروح الرياضية للطلاب.</p>
+                <button class="btn" onclick="alert('تم تسجيل اهتمامك بالأكاديمية الرياضية!')">الانضمام للنادي</button>
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="activity-img">صورة الفنون والمسرح</div>
+            <div class="activity-content">
+                <h3>نادي الفنون والخط العربي والمسرح</h3>
+                <p>مساحة إبداعية للطلاب لتطوير مهارات الرسم والخط العربي، وإقامة العروض المسرحية السنوية على مسرح المدرسة.</p>
+                <button class="btn" onclick="alert('تم تسجيل اهتمامك بنادي الفنون!')">الانضمام للنادي</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 مدرسة التميز الخاصة</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

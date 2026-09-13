@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور - مدرسة الرافدين الأهلية</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 240px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08); /* زووم خفيف احترافي على الصورة عند التمرير */
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(109, 16, 60, 0.88); /* خلفية بنفسجية عنابية متناسقة مع الهوية */
+            color: #fff;
+            padding: 0.7rem 0.5rem;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: bold;
+            backdrop-filter: blur(3px); /* تأثير زجاجي خفيف للنص */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر (العنوان والشعار) -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="شعار مدرسة الرافدين الأهلية" class="logo-img">
+                <span>مدرسة الرافدين الأهلية</span>
+            </a>
+            <a href="admission.html" class="btn" style="margin:0; padding: 0.4rem 1rem;">التسجيل السريع</a>
+        </div>
+    </header>
+
+    <!-- شريط التنقل المنفصل مع التمرير الأفقي -->
+    <nav class="main-nav">
+        <div class="nav-scroll-container">
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="student-portal.html">بوابة الطالب</a></li>
+                <li><a href="activities.html">الأنشطة المدرسية</a></li>
+                <li><a href="gallery.html" class="active">معرض الصور</a></li>
+                <li><a href="admission.html">القبول والتسجيل</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="color: var(--primary-dark); margin-bottom: 0.5rem;">معرض الصور والفعاليات</h1>
+        <p style="color: #666;">جولة مصورة داخل مرافق المدرسة وأبرز اللحظات من فعالياتنا ورحلاتنا:</p>
+
+        <div class="gallery-grid">
+            <!-- 1. مختبر العلوم -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" alt="مختبر العلوم والتجارب">
+                <div class="gallery-caption">مختبر العلوم والتجارب</div>
+            </div>
+
+            <!-- 2. المكتبة المركزية -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="المكتبة المركزية">
+                <div class="gallery-caption">المكتبة المركزية وقاعة القراءة</div>
+            </div>
+
+            <!-- 3. الملاعب الرياضية -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1577223625816-7546f13df25d?auto=format&fit=crop&w=800&q=80" alt="الملاعب الرياضية المغلقة">
+                <div class="gallery-caption">الملاعب الرياضية المغلقة</div>
+            </div>
+
+            <!-- 4. تكريم المتفوقين -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="حفل تكريم المتفوقين">
+                <div class="gallery-caption">حفل تكريم المتفوقين السنوي</div>
+            </div>
+
+            <!-- 5. مسرح المدرسة -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=800&q=80" alt="مسرح المدرسة">
+                <div class="gallery-caption">مسرح المدرسة والفعاليات الثقافية</div>
+            </div>
+
+            <!-- 6. الفصول الذكية -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="الفصول الدراسية والتفاعلية">
+                <div class="gallery-caption">الفصول الدراسية والتفاعلية</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+       <p>جميع الحقوق محفوظة © 2026 مدرسة الرافدين الأهلية</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+

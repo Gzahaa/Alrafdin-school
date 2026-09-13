@@ -3,66 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الرئيسية - مدرسة الرافدين الأهلية </title>
+    <title>الرئيسية - مدرسة الرافدين الأهلية</title>
     <link rel="stylesheet" href="style.css">
     <style>
+
+
         /* تنسيقات إضافية خاصة بالميزات والأقسام في الصفحة الرئيسية */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
+   .features-grid {
+    display: grid;
+    /* تحديد الحد الأدنى والأقصى الكافي لكل كارت دون تمطيط زائد */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
 
-        .feature-card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            border-top: 4px solid var(--primary);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+.feature-card {
+    background: #fff;
+    padding: 1.8rem 1.5rem;
+    border-radius: 12px; /* انحناء أنعم */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* توزيع المحتوى والزر بشكل متناسق عمودياً */
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
 
-        .feature-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-        }
+.feature-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+}
 
-        .feature-card p {
-            color: #555;
-            margin-bottom: 1.2rem;
-            font-size: 0.95rem;
-        }
+.feature-card p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    /* تحديد حد أقصى لعرض النص داخل الكارت لمنع فرطه على الشاشات العريضة */
+    max-width: 320px; 
+}
 
-        .quick-banner {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 2.5rem 1.5rem;
-            border-radius: 8px;
-            margin: 3rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+/* تحسين بنر التواصل السريع للشاشات الكبيرة */
+.quick-banner {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-right: 5px solid var(--secondary);
+}
 
-        .quick-banner h2 {
-            color: var(--secondary);
-        }
+.quick-banner h2 {
+    color: var(--secondary);
+    margin-bottom: 0.4rem;
+}
+
     </style>
 </head>
 <body>
 
-      <!-- الهيدر (العنوان والشعار) -->
+    <!-- الهيدر (العنوان والشعار) -->
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo">مدرسة الرافدين الأهلية </a>
+            <a href="index.html" class="logo">
+                <!-- استبدل logo.jpg بمسار صورة الشعار لديك -->
+                <img src="logo.jpg" alt="شعار مدرسة الرافدين الأهلية" class="logo-img">
+                <span>مدرسة الرافدين الأهلية</span>
+            </a>
             <a href="admission.html" class="btn" style="margin:0; padding: 0.4rem 1rem;">التسجيل السريع</a>
         </div>
     </header>
@@ -84,7 +104,7 @@
     <div class="container">
         <!-- قسم الواجهة الرئيسية Hero Section -->
         <section class="hero">
-            <h1>مرحباً بكم في مدرسة الرافدين </h1>
+            <h1>مرحباً بكم في مدرسة الرافدين</h1>
             <p>نعمل على بناء مستقبل واعد لأبنائكم عبر التعليم المبتكر، الأنشطة المتنوعة، والبيئة التربوية المتكاملة.</p>
             <a href="admission.html" class="btn">قدّم طلب الالتحاق الآن</a>
             <a href="student-portal.html" class="btn" style="background: transparent; border: 2px solid var(--secondary); color: var(--secondary);">دخول بوابة الطالب</a>
@@ -101,7 +121,7 @@
             </div>
 
             <div class="feature-card">
-                <h3>🤖 الأنشطة والأندية M</h3>
+                <h3>🤖 الأنشطة والأندية</h3>
                 <p>نُنمّي مهارات الطلاب عبر أندية البرمجة، STEM، الأكاديمية الرياضية، والفنون والمسرح.</p>
                 <a href="activities.html" class="btn">استكشف الأنشطة</a>
             </div>
@@ -131,7 +151,7 @@
 
     <!-- الفوتر -->
     <footer>
-        <p>جميع الحقوق محفوظة © 2026 مدرسة التميز الخاصة</p>
+        <p>جميع الحقوق محفوظة © 2026 مدرسة الرافدين الأهلية</p>
     </footer>
 
     <script src="main.js"></script>

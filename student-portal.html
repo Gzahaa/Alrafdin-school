@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة الطالب - مدرسة التميز الخاصة</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    .portal-grid {
+        display: grid;
+        /* استخدام minmax بحجم أضيق وتحديد التكبير للحفاظ على تناسق الأعمدة */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    /* تحديد حد أقصى لشبكة الكروت على الشاشات الكبيرة جداً للحد من التمدد الزائد */
+    @media (min-width: 1200px) {
+        .portal-grid {
+            /* إذا كان عدد الكروت 3 مثلاً، يثبت العرض على 3 أعمدة متناسقة */
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        }
+    }
+
+    .portal-card {
+        background: #fff;
+        padding: 1.8rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        border-top: 4px solid var(--secondary);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portal-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .portal-card h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        border-bottom: 2px solid var(--light);
+        padding-bottom: 0.5rem;
+    }
+
+    .list-item {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.95rem;
+    }
+
+    .list-item:last-child {
+        border-bottom: none; /* إزالة الخط السفلي من آخر عنصر */
+    }
+</style>
+
+</head>
+<body>
+
+      <!-- الهيدر (العنوان والشعار) -->
+    <header>
+        <div class="header-container">
+        	<img src="logo.jpg" alt="شعار مدرسة الرافدين الأهلية" class="logo-img">
+            <a href="index.html" class="logo">مدرسة الرافدين الأهلية </a>
+            <a href="admission.html" class="btn" style="margin:0; padding: 0.4rem 1rem;">التسجيل السريع</a>
+        </div>
+    </header>
+
+    <!-- شريط التنقل المنفصل مع التمرير الأفقي -->
+    <nav class="main-nav">
+        <div class="nav-scroll-container">
+            <ul>
+                <li><a href="index.html" >الرئيسية</a></li>
+                <li><a href="student-portal.html" class="active">بوابة الطالب</a></li>
+                <li><a href="activities.html">الأنشطة المدرسية</a></li>
+                <li><a href="gallery.html">معرض الصور</a></li>
+                <li><a href="admission.html">القبول والتسجيل</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h1>بوابة الطالب الرقمية</h1>
+        <p>مرحباً بك مجدداً. يمكنك متابعة جدولك الدراسي والواجبات المطلوبة من هنا:</p>
+
+        <div class="portal-grid">
+            <div class="portal-card">
+                <h3>📚 الواجبات المنزلية القادمة</h3>
+                <div class="list-item">
+                    <span>رياضيات - حل تمارين ص 45</span>
+                    <strong style="color:red;">غداً</strong>
+                </div>
+                <div class="list-item">
+                    <span>علوم - تقرير عن الفضاء</span>
+                    <span>الأحد</span>
+                </div>
+                <div class="list-item">
+                    <span>لغة عربية - حفظ النص</span>
+                    <span>الثلاثاء</span>
+                </div>
+            </div>
+
+            <div class="portal-card">
+                <h3>🗓️ الجدول الدراسي اليومي</h3>
+                <div class="list-item"><span>الحصة 1: رياضيات</span><span>08:00 ص</span></div>
+                <div class="list-item"><span>الحصة 2: فيزياء</span><span>09:00 ص</span></div>
+                <div class="list-item"><span>الحصة 3: لغة إنجليزية</span><span>10:15 ص</span></div>
+                <div class="list-item"><span>الحصة 4: حاسوب وبرمجة</span><span>11:15 ص</span></div>
+            </div>
+
+            <div class="portal-card">
+                <h3>📁 المكتبة الرقمية والتحميلات</h3>
+                <p>تنزيل الكتب والمذكرات الدراسية بصيغة PDF.</p>
+                <br>
+                <button class="btn" onclick="alert('جاري فتح المكتبة الرقمية...')">دخول المكتبة</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+             <p>جميع الحقوق محفوظة © 2026 مدرسة الرافدين الأهلية</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
